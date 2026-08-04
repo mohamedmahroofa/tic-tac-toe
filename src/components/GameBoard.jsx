@@ -17,7 +17,7 @@ export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
       updateBoard[rowIndex][colIndex] = activePlayerSymbol;
       return updateBoard;
     });
-    onSelectSqure();
+    onSelectSquare();
   };
 
   return (

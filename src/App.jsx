@@ -7,11 +7,11 @@ function App() {
   const [gameTurn, setGameTurn] = useState([]);
   const [activePlayer, setActivePlayer] = useState("X");
 
-  const handleActivePlayer = () => [
-    setActivePlayer((currActivePlayer) =>
-      currActivePlayer === "X" ? "O" : "X",
-    ),
-  ];
+  const handleSelectSquare = () => {
+    setActivePlayer((currentActivePlayer) =>
+      currentActivePlayer === "X" ? "O" : "X",
+    );
+  };
 
   return (
     <main>
@@ -29,7 +29,7 @@ function App() {
           />
         </ol>
         <GameBoard
-          onSelectSquare={handleActivePlayer}
+          onSelectSquare={handleSelectSquare}
           activePlayerSymbol={activePlayer}
         />
       </div>
