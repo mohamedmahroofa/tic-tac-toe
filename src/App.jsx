@@ -4,6 +4,7 @@ import GameBoard from "./components/GameBoard.jsx";
 import Log from "./components/Log.jsx";
 
 function App() {
+  const [gameTurn, setGameTurn] = useState([]);
   const [activePlayer, setActivePlayer] = useState("X");
 
   const handleActivePlayer = () => [
