@@ -30,7 +30,7 @@ function App() {
       const currentPlayer = derivedPlayerState(prevTurns);
 
       const updatedTurn = [
-        { square: { row: rowIndex, col: colIndex }, player: activePlayer },
+        { square: { row: rowIndex, col: colIndex }, player: currentPlayer },
         ...prevTurns,
       ];
       return updatedTurn;
