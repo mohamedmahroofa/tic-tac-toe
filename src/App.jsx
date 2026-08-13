@@ -22,7 +22,7 @@ function derivedPlayerState(gameTurns) {
 }
 
 function App() {
-  const [players, setPlayerName] = useState({
+  const [players, setPlayers] = useState({
     X: "player 1",
     O: "Player 2",
   });
@@ -77,8 +77,8 @@ function App() {
     });
   };
 
-  const handlePlayerName = (symbol, newName) => {
-    setPlayerName((prevPlayers) => {
+  const handlePlayerNameChange = (symbol, newName) => {
+    setPlayers((prevPlayers) => {
       return {
         ...prevPlayers,
         [symbol]: newName,
@@ -98,13 +98,13 @@ function App() {
             initialName="Player 1"
             symbol="X"
             isActive={activePlayer === "X"}
-            onChangeName={handlePlayerName}
+            onChangeName={handlePlayerNameChange}
           />
           <Player
             initialName="Player 2"
             symbol="0"
             isActive={activePlayer === "O"}
-            onChangeName={handlePlayerName}
+            onChangeName={handlePlayerNameChange}
           />
         </ol>
         {(winner || hasDraw) && (

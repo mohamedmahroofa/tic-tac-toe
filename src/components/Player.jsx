@@ -35,7 +35,7 @@ export default function Player({
         {editablePlayerName}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={handleEditingState} onClick={onChangeName}>
+      <button onClick={handleEditingState}>
         {isEditing ? "Save" : "Edit"}
       </button>
     </li>
