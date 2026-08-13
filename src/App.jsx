@@ -6,9 +6,9 @@ import GameOver from "./components/GameOver.jsx";
 import { WINNING_COMBINATIONS } from "./winning-combinations.js";
 
 const PLAYERS = {
-  X : 'Player 1',
-  O : 'Player 2'
-}
+  X: "Player 1",
+  O: "Player 2",
+};
 
 const INITIAL_GAME_BOARD = [
   [null, null, null],
@@ -83,7 +83,7 @@ function App() {
     setPlayers((prevPlayers) => {
       return {
         ...prevPlayers,
-        [symbol]: newName,
+        [symbol]: newName.toUpperCase(),
       };
     });
   };
